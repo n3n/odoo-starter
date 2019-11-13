@@ -2,5 +2,12 @@
 odoo/
 
 Dockerfile
+README.md
+
 *.zip
 *.yml
+
+*.pyc
+*.pyo
+*.pyd
+__pycache__
