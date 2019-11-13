@@ -1,0 +1,35 @@
+version: "2"
+services:
+  web:
+    image: odoo:12.0
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+      - ./addons:/mnt/extra-addons
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=odoo
+      - 'AWS_HOST='
+      - 'AWS_REGION='
+      - 'AWS_ACCESS_KEY_ID='
+      - 'AWS_SECRET_ACCESS_KEY='
+      - 'AWS_BUCKETNAME='
+    command: ["odoo", "--dev=all"]
+
+  db:
+    image: postgres:10
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+volumes:
+    odoo-web-data:

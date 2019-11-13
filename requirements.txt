@@ -1,0 +1,5 @@
+boto3==1.10.16
+botocore==1.13.16
+jmespath==0.9.4
+s3transfer==0.2.1
+python-dateutil==2.8.0

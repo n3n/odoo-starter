@@ -1,0 +1,8 @@
+.vscode/settings.json
+odoo/
+__pycache__
+
+*.pyc
+
+docker-compose.prod.yml
+docker-compose.yml
