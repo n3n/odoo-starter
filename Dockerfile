@@ -25,4 +25,3 @@ ENV PORT 8080
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["odoo", "--http-port=8080"]
-# CMD odoo --http-port=8080
