@@ -1,0 +1,21 @@
+{
+  "name": "odoo-cloud-run",
+  "env": {
+    "DB_HOST": {
+      "description": "The address of the postgres server. If you used a postgres container, set to the name of the container.",
+      "required": true
+    },
+    "DB_PORT": {
+      "description": "The port the postgres server is listening to.",
+      "required": true
+    },
+    "DB_USER": {
+      "description": "The postgres role with which Odoo will connect. If you used a postgres container, set to the same value as POSTGRES_USER.",
+      "required": true
+    },
+    "DB_PASSWORD": {
+      "description": "The password of the postgres role with which Odoo will connect. If you used a postgres container, set to the same value as POSTGRES_PASSWORD.",
+      "required": true
+    }
+  }
+}

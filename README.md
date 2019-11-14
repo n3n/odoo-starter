@@ -2,6 +2,8 @@
 
 https://github.com/odoo/docker/blob/master/12.0
 
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+
 ## How to run
 
 Copy `docker-compose.example.yml` to `docker-compose.yml`
