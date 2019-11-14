@@ -16,6 +16,8 @@ COPY ./external-src /odoo/external-src
 COPY ./addons /mnt/extra-addons
 RUN chown odoo /mnt/extra-addons
 
+COPY ./config /etc/odoo
+
 EXPOSE 8080
 
 # Set default user when running the container
@@ -24,4 +26,4 @@ USER odoo
 ENV PORT 8080
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["odoo", "--http-port=8080"]
+CMD ["odoo"]
