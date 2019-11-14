@@ -10,9 +10,11 @@ RUN pip3 install -r requirements.txt
 # Copy to root directory
 COPY ./entrypoint.sh /
 
+# Odoo addons
+COPY ./local-src /odoo/local-src
+COPY ./external-src /odoo/external-src
 COPY ./addons /mnt/extra-addons
 RUN chown odoo /mnt/extra-addons
-
 
 EXPOSE 8080
 

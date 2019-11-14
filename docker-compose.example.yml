@@ -10,9 +10,9 @@ services:
       - odoo-web-data:/var/lib/odoo
       - ./addons:/mnt/extra-addons
     environment:
-      - HOST=db
-      - USER=odoo
-      - PASSWORD=odoo
+      - DB_HOST=db
+      - DB_USER=odoo
+      - DB_PASSWORD=odoo
       - 'AWS_HOST='
       - 'AWS_REGION='
       - 'AWS_ACCESS_KEY_ID='
